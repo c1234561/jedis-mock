@@ -1,8 +1,8 @@
 package com.github.fppt.jedismock.operations;
 
+import com.github.fppt.jedismock.server.Slice;
 import com.github.fppt.jedismock.storage.OperationExecutorState;
 import com.github.fppt.jedismock.storage.RedisBase;
-import com.github.fppt.jedismock.server.Slice;
 
 import java.util.HashMap;
 import java.util.List;
@@ -128,6 +128,10 @@ public class OperationFactory {
                 return Optional.of(new RO_hello());
             case "flushall":
                 return Optional.of(new RO_flushall(state));
+            case "psubscribe":
+                return Optional.of(new RO_psubscribe(state, params));//In order not to report unsupported operations
+            case "punsubscribe":
+                return Optional.of(new RO_punsubscribe(state, params));//In order not to report unsupported operations
             default:
                 return Optional.empty();
         }
