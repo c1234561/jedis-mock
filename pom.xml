@@ -9,7 +9,7 @@
         <version>7</version>
     </parent>
 
-    <groupId>io.github.al</groupId>
+    <groupId>io.github.c1234561</groupId>
     <artifactId>jedis-mock</artifactId>
     <version>0.1.23-SNAPSHOT</version>
     <packaging>jar</packaging>
